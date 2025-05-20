@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  name: YXJnb2Nk
+  project: ZGVmYXVsdA==
+  type: Z2l0
+  url: aHR0cHM6Ly9naXRodWIuY29tL2Rlc3RuZ3gvZ2l0b3BzLmdpdA==
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: gitops-apps-repository
+  namespace: argocd
+type: Opaque
+

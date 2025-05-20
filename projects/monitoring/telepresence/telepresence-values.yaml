@@ -1,0 +1,7 @@
+
+agentInjector:
+  enabled: false
+managerRbac:
+  namespaces:
+    - monitoring
+
