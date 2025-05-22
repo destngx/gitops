@@ -1,0 +1,33 @@
+grafana:
+  fullnameOverride: "grafana"
+  adminUser: admin
+  adminPassword: strongpassword
+  defaultDashboardsTimezone: browser
+
+prometheus:
+  prometheusSpec:
+    retention: 2d
+    retentionSize: 2GiB
+
+nodeExporter:
+  forceDeployDashboards: true
+  operatingSystems:
+    aix:
+      enabled: false
+    darwin:
+      enabled: false
+
+kubeControllerManager:
+  enabled: false
+
+kubeEtcd:
+  enabled: false
+
+kubeScheduler:
+  enabled: false
+
+kubeProxy:
+  enabled: false
+
+coreDns:
+  enabled: false

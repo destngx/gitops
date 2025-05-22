@@ -6,3 +6,4 @@ resources:
   - appProject.yaml
   - namespace.yaml
   - telepresence
+  - kube-prometheus-stack
