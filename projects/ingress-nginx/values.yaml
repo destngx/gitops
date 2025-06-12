@@ -1,0 +1,9 @@
+controller:
+  autoscaling:
+    enabled: true
+    maxReplicas: 2
+  service:
+    enabled: true
+    type: LoadBalancer
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: nlb
