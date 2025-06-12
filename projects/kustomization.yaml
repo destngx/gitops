@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - argocd-apps-management
-  - demo-app
+  - argocd
   - monitoring
   - ingress-nginx
 

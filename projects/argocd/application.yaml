@@ -1,16 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-app
+  name: argocd
   namespace: argocd
 spec:
   destination:
-    namespace: demo-app
+    namespace: argocd
     server: https://kubernetes.default.svc
-  project: demo-app
-  sources:
-  - repoURL: registry-1.docker.io/bitnamicharts
-    chart: nginx
-    targetRevision: 20.0.3
+  project: default
+  source:
+    path: init-argocd
+    repoURL: https://github.com/destngx/gitops.git
+    targetRevision: main
   syncPolicy:
     automated: {}
+
