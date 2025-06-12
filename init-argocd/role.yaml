@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
   name: argocd-server
-  namespace: argocd
 rules:
 - apiGroups:
   - ""
@@ -28,7 +27,6 @@ rules:
   - applications
   - appprojects
   - applicationsets
-  - logs
   verbs:
   - create
   - get

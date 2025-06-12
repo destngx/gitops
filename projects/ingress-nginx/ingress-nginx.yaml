@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: ingress-nginx
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/background
 spec:
   destination:
     namespace: ingress-nginx
@@ -18,6 +20,10 @@ spec:
   - repoURL: https://github.com/destngx/gitops.git
     targetRevision: main
     ref: values
+  # Create custom ingress that will create ALB using Kustomize
+  # - repoURL: https://github.com/destngx/gitops.git
+  #   targetRevision: main
+  #   path: projects/ingress-nginx/custom-ingress
   syncPolicy:
     automated: {}
     syncOptions:

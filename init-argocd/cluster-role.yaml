@@ -39,7 +39,6 @@ rules:
   resources:
   - applications
   - applicationsets
-  - logs
   verbs:
   - get
   - list
